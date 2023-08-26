@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #eee;
+}
+audio::-webkit-media-controls-timeline,
+video::-webkit-media-controls-timeline {
+    display: none;
+}
+audio::-webkit-media-controls,
+video::-webkit-media-controls {
+    display: none;
+}
+@media (max-width: 600px) {
+    .player {
+        width: calc(100% - 100px) !important;
+        margin: 100px 50px 100px 50px !important;
+    }
+}
+@media (max-width: 600px) {
+    .player {
+        width: calc(100% - 40px) !important;
+        margin: 100px 20px 100px 20px !important;
+    }
+}
+.player {
+    width: 500px;
+    /* height: 360px; */
+    position: relative;
+    overflow: hidden;
+    margin: 100px auto;
+}
+video {
+    width: 100%;
+    height: 100%;
+}
+
+
+.player-controls {
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    transition: .3s linear;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.toggle {
+    margin-left: 10px;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+.toggle i {
+  color: white;
+  font-size: 20px;
+}
+.back-forward {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 10px;
+}
+.player-button {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    color: #fff;
+}
+.progress {
+    height: 10px;
+    width: 100%;
+    background-color: red;
+}
+.progress .progress-filled {
+    height: 10px;
+    width: 0;
+    background-color: blue;
+}
+/* .viewer:hover + .player-controls {
+    bottom: 40px;
+} */
